@@ -1,5 +1,5 @@
 import React, { useReducer, useEffect, useCallback, useState } from 'react';
-import { FoodItem, Contribution, User, FoodCategory } from './types';
+import { FoodItem, Contribution, User } from './types';
 import Header from './components/Header';
 import InventoryView from './components/InventoryView';
 import ContributionsView from './components/ContributionsView';
@@ -89,8 +89,8 @@ function App() {
     return 'light';
   });
   
-  // Ya no almacenamos la clave de Gemini en el cliente. El backend la maneja.
-  const [isApiKeyModalOpen, setApiKeyModalOpen] = useState(false);
+  // Theme management for dark/light mode
+  // Note: API key modal is disabled as backend handles Gemini API key
 
   useEffect(() => {
     const root = window.document.documentElement;
